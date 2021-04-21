@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="RembrandtApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+    crossorigin="anonymous"
+  />
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"
+    integrity="sha512-7oYXeK0OxTFxndh0erL8FsjGvrl2VMDor6fVqzlLGfwOQQqTbYsGPv4ZZ15QHfSk80doyaM0ZJdvkyDcVO7KFA=="
+    crossorigin="anonymous"
+  ></script>
+    <title>Species of Snake</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body ng-controller ="PaintingController">
+    
+    <div class="container">
+        <div id="home" class="flex-center flex-column">
+            <p id="header">Snake Zoo</p><br>
+
+            <table>
+                <tr>
+                    <td>
+                        <button class="btn btn-danger" ng-click="previous();">Previous</button>
+                    </td>                 
+                    <td>
+                        <img class="big" ng-src="{{paintings[paintingCount]}}">
+                    </td>                  
+                    <td>
+                        <button class="btn btn-success" ng-click="next();">Next</button>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+
+
+
+    
+    <script src="app.js"></script>
+</body>
+</html>
